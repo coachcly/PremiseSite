@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Premise &middot; IBM Premier Business Partner</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    
+
+    <!-- Le styles -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/bootstrap-responsive.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link href="css/master.css" rel="stylesheet" type="test/css">
+    <link href="css/masteredit.css" rel="stylesheet" type="test/css">
+
+    
+    <style>
+
+    /* GLOBAL STYLES
+    -------------------------------------------------- */
+    /* Padding below the footer and lighter body text */
+
+    body {
+      padding-bottom: 40px;
+      color: #5a5a5a;
+    }
+
+
+
+    /* CUSTOMIZE THE NAVBAR
+    -------------------------------------------------- */
+
+    /* Special class on .container surrounding .navbar, used for positioning it into place. */
+    .navbar-wrapper {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 10;
+      margin-top: 20px;
+      margin-bottom: -90px; /* Negative margin to pull up carousel. 90px is roughly margins and height of navbar. */
+    }
+    .navbar-wrapper .navbar {
+
+    }
+
+    /* Remove border and change up box shadow for more contrast */
+    .navbar .navbar-inner {
+      border: 0;
+      -webkit-box-shadow: 0 2px 10px rgba(0,0,0,.25);
+         -moz-box-shadow: 0 2px 10px rgba(0,0,0,.25);
+              box-shadow: 0 2px 10px rgba(0,0,0,.25);
+    }
+
+    /* Downsize the brand/project name a bit */
+    .navbar .brand {
+      padding: 14px 20px 16px; /* Increase vertical padding to match navbar links */
+      font-size: 16px;
+      font-weight: bold;
+      text-shadow: 0 -1px 0 rgba(0,0,0,.5);
+    }
+
+    /* Navbar links: increase padding for taller navbar */
+    .navbar .nav > li > a {
+      padding: 15px 20px;
+    }
+
+    /* Offset the responsive button for proper vertical alignment */
+    .navbar .btn-navbar {
+      margin-top: 10px;
+    }
+
+
+
+    /* CUSTOMIZE THE CAROUSEL
+    -------------------------------------------------- */
+
+    /* Carousel base class */
+    .carousel {
+      margin-bottom: 60px;
+    }
+
+    .carousel .container {
+      position: relative;
+      z-index: 9;
+    }
+
+    .carousel-control {
+      height: 80px;
+      margin-top: 0;
+      font-size: 120px;
+      text-shadow: 0 1px 1px rgba(0,0,0,.4);
+      background-color: transparent;
+      border: 0;
+      z-index: 10;
+    }
+
+    .carousel .item {
+      height: 500px;
+    }
+    .carousel img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      min-width: 100%;
+      height: 500px;
+    }
+
+    .carousel-caption {
+      background-color: transparent;
+      position: static;
+      max-width: 550px;
+      padding: 0 20px;
+      margin-top: 200px;
+    }
+    .carousel-caption h1,
+    .carousel-caption .lead {
+      margin: 0;
+      line-height: 1.00;
+      color: #fff;
+      text-shadow: 0 1px 1px rgba(0,0,0,.4);
+    }
+    .carousel-caption .btn {
+      margin-top: 10px;
+    }
+
+
+
+    /* MARKETING CONTENT
+    -------------------------------------------------- */
+
+    /* Center align the text within the three columns below the carousel */
+    .marketing .span4 {
+      text-align: center;
+    }
+    .marketing h2 {
+      font-weight: normal;
+    }
+    .marketing .span4 p {
+      margin-left: 10px;
+      margin-right: 10px;
+    }
+
+
+    /* Featurettes
+    ------------------------- */
+    /*
+    .featurette-divider {
+      margin: 80px 0; /* Space out the Bootstrap <hr> more */
+      
+    }
+
+    .featurette-sample {
+      margin: 30px 0; /* Space out the Bootstrap <hr> more */
+    }
+    .featurette {
+      padding-top: 120px; /* Vertically center images part 1: add padding above and below text. */
+      overflow: hidden; /* Vertically center images part 2: clear their floats. */
+    }
+    .featurette-image {
+      margin-top: -120px; /* Vertically center images part 3: negative margin up the image the same amount of the padding to center it. */
+    }
+
+    /* Give some space on the sides of the floated elements so text doesn't run right into it. */
+    .featurette-image.pull-left {
+      margin-right: 40px;
+    }
+    .featurette-image.pull-right {
+      margin-left: 40px;
+    }
+
+    /* Thin out the marketing headings */
+    .featurette-heading {
+      font-size: 50px;
+      font-weight: 300;
+      line-height: 1;
+      letter-spacing: -1px;
+    }
+
+
+
+    /* RESPONSIVE CSS
+    -------------------------------------------------- */
+
+    @media (max-width: 979px) {
+
+      .container.navbar-wrapper {
+        margin-bottom: 0;
+        width: auto;
+      }
+      .navbar-inner {
+        border-radius: 0;
+        margin: -20px 0;
+      }
+
+      .carousel .item {
+        height: 500px;
+      }
+      .carousel img {
+        width: auto;
+        height: 500px;
+      }
+
+      .featurette {
+        height: auto;
+        padding: 0;
+      }
+      .featurette-image.pull-left,
+      .featurette-image.pull-right {
+        display: block;
+        float: none;
+        max-width: 40%;
+        margin: 0 auto 20px;
+      }
+    }
+
+
+    @media (max-width: 767px) {
+
+      .navbar-inner {
+        margin: -20px;
+      }
+
+      .carousel {
+        margin-left: -20px;
+        margin-right: -20px;
+      }
+      .carousel .container {
+
+      }
+      .carousel .item {
+        height: 300px;
+      }
+      .carousel img {
+        height: 300px;
+      }
+      .carousel-caption {
+        width: 65%;
+        padding: 0 70px;
+        margin-top: 100px;
+      }
+      .carousel-caption h1 {
+        font-size: 25px;
+      }
+      .carousel-caption .lead,
+      .carousel-caption .btn {
+        font-size: 18px;
+      }
+
+      .marketing .span4 + .span4 {
+        margin-top: 40px;
+      }
+
+      .featurette-heading {
+        font-size: 30px;
+      }
+      .featurette .lead {
+        font-size: 18px;
+        line-height: 1.5;
+      }
+
+    }
+    </style>
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="../assets/js/html5shiv.js"></script>
+    <![endif]-->
+
+    <!-- Fav and touch icons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="ico/favicon.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="ico/favicon.png">
+      <link rel="apple-touch-icon-precomposed" sizes="72x72" href="ico/favicon.png">
+                    <link rel="apple-touch-icon-precomposed" href="ico/favicon.png">
+                                   <link rel="shortcut icon" href="ico/favicon.png">
+  </head>
+
+  <body>
+
+
+
+    <!-- NAVBAR
+    ================================================== -->
+    <div class="navbar-wrapper">
+      <!-- Wrap the .navbar in .container to center it within the absolutely positioned parent. -->
+      <div class="container">
+
+        <div class="navbar navbar-inverse">
+          <div class="navbar-inner">
+            <!-- Responsive Navbar Part 1: Button for triggering responsive navbar (not covered in tutorial). Include responsive CSS to utilize. -->
+            <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="brand" href="./index.html">Premise Inc</a>
+            <!-- Responsive Navbar Part 2: Place all navbar contents you want collapsed withing .navbar-collapse.collapse. -->
+            <div class="nav-collapse collapse">
+              <ul class="nav">
+                <li class="active"><a href="./index.html">Home</a></li>
+                <li><a href="./About.html">About</a></li>
+                <li><a href="./Contact.html">Contact</a></li>
+                <!--<li><a href="./dashboard.html">Dashboard Demo</a></li> -->
+                <!-- Read about Bootstrap dropdowns at http://twbs.github.com/bootstrap/javascript.html#dropdowns -->
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Solutions <b class="caret"></b></a>
+                  <ul class="dropdown-menu">
+                    <li class="nav-header">IBM</li>
+                    <li><a href="#">IBM iSeries</a></li>
+                    <li><a href="#">Storage</a></li>
+                    <li><a href="#">Cloud Services</a></li>
+                    <li class="divider"></li>
+                    <li class="nav-header">Document Management</li>
+                    <!--<li><a href="./dm-idatix.html">iDatix</a></li>
+                    <li><a href="./dm-smart-search.html">SmartSearch</a></li>
+                    -->
+                  </ul>
+                </li>
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Managed Services <b class="caret"></b></a>
+                  <ul class="dropdown-menu">
+                    <li class="nav-header">Managed Services</li>
+                    <li><a href="#">Managed San Services</a></li>
+                    <li><a href="#">Cloud Computing</a></li>
+                    <li><a href="#">Disaster Recovery</a></li>
+                    <li><a href="#">Cloud Services</a></li>
+                    <li><a href="#">Dashboard</a></li>
+                  </ul>
+                </li>
+                    <li><a href="https://twitter.com/PremiseNow"><i class="fa fa-twitter fa-7x"></i></a></li>
+                    <li><a href="#"><i class="fa fa-linkedin fa-7x"></i></a></li>
+                    <li><a href="#"><i class="fa fa-facebook fa-7x"></i></a></li>
+                    <li><a href="#"><i class="fa fa-google-plus fa-7x"></i></a></li>
+              </ul>
+            </div><!--/.nav-collapse -->
+          </div><!-- /.navbar-inner -->
+        </div><!-- /.navbar -->
+
+      </div> <!-- /.container -->
+    </div><!-- /.navbar-wrapper -->
+    <!-- 
+    <div id="myCarousel" class="carousel slide">
+      <div class="carousel-inner">
+        <div class="item active">
+          <img src="img/examples/trusted-services1.jpg" alt="">
+          <div class="container">
+            <div class="carousel-caption">
+              <h1>Welcome to Premise.</h1>
+              <p class="lead">Premise, Inc. is an IBM Premier Business Partner and leading provider of innovative IT solutions that deliver superior business results. Our expert team of consultants and engineers has a singular focus: to exceed every client's expectations by fully understanding and cost-effectively solving their unique business challenges..</p>
+              <a class="btn btn-large btn-primary" href="#">Contact us today</a>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <img src="img/examples/managed-services-final.jpg" alt="">
+          <div class="container">
+            <div class="carousel-caption">
+              <h1>IBM Premier Business Partner.</h1>
+              <p class="lead">Premise consultants have the knowledge, experience, and talent required to provide a full range of custom solutions in the areas of business continuity, data backup and recovery, consolidation and virtualization, and storage area networks. We specialize in iSeries and xSeries solutions.</p>
+              <a class="btn btn-large btn-primary" href="#">Learn more</a>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <img src="img/examples/drha.jpg" alt="">
+          <div class="container">
+            <div class="carousel-caption">
+              <h1>Document Management Solutions.</h1>
+              <p class="lead">Premise designs specific solutions after careful assessment of a client’s existing IT environment, including hardware, software, data storage, networking, backup and recovery components. Learn how organizations leverage the benefits of document management software including customers in the healthcare, insurance, government, legal and financial markets along with many more.</p>
+              <a class="btn btn-large btn-primary" href="./DM.html">Learn more</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <a class="left carousel-control" href="#myCarousel" data-slide="prev">&lsaquo;</a>
+      <a class="right carousel-control" href="#myCarousel" data-slide="next">&rsaquo;</a>
+    </div>  -->
+
+
+   <hr class="featurette-sample">
+    <!-- Marketing messaging and features
+    ================================================== -->
+    <!-- Wrap the rest of the page in another container to center all the content. -->
+
+    <div class="container marketing">
+
+      <!-- Three columns of text below the carousel -->
+      <div class="row">
+        <div class="span4">
+
+          <!--
+          <img class="img-circle" data-src="holder.js/140x140">
+          <h2>Sonic Wall</h2>
+          <p>Protection at the speed of business. SonicWALL designs, develops, and manufactures security solutions your network, email, remote access, data recovery, and management needs..</p>
+          <p><a class="btn" href="#">View details &raquo;</a></p>
+        </div>
+        <div class="span4">
+          <img class="img-circle" data-src="holder.js/140x140">
+          <h2>Intergreated Support Portal
+          </h2>
+          <p>Help Desk Support, Via Remote PC Access. .</p>
+          <p><a class="btn" href="#">Visit Portal &raquo;</a></p>
+        </div>
+        <div class="span4">
+          <img class="img-circle" data-src="holder.js/140x140">
+          <h2>Cloud Services</h2>
+          <p>Premise Provides a Cost Effective Solution to Help with Today’s Economic Climate and IT Spending Restrictions
+Premise has an established and highly successful history with companies of all sizes and industries. The Premise Data Recovery Solution is designed for today’s business needs!</p>
+          <p><a class="btn" href="#">View details &raquo;</a></p>
+        </div>
+      </div>
+      -->
+       </div>
+      <!-- START THE FEATUREsS -->
+
+      
+      <hr class="featurette-sample">
+
+      <div class="featurette">
+        <!-- <img class="featurette-image pull-right" src="img/idatix-logo.jpg"> -->
+        <h2 class="featurette-heading">Premise Inc.<span class="muted"> SmartSearch</span></h2>
+        <p class="lead">
+        <img class="featurette-image pull-right" src="img/smart-search.png">
+                        What is Document Management?</p>
+                        Document management encompasses the processes and procedures your organization uses as it pertains to capturing, storing, securing and retrieving information a daily basis. For many organizations, these processes can be greatly improved with the use of document management software.
+                        </p>
+                        <p class="lead">Document Storage and Repository</p>
+                         A centralized repository for all of your critical business content to be viewed, accessed, shared, and modified.
+                          All of your unstructured content is stored in a centralized document management repository to be viewed, shared, accessed and revised. 
+                          Key features of document management include version control, audit trails, annotations and the ability to check in and check out documents. 
+                          The integrity of all previous document versions is maintained, providing a complete audit trail of all activity surrounding every file within the system.</p>
+
+                        <p class="lead">Document & Content Security</p>
+
+                        Have confidence your content is safe by controlling who sees, accesses and shares all of your information.
+                        Protect your valuable business information and ensure that content is not accessible to unauthorized parties.
+                        set limits down to group, department and specific user’s, as well as restrict the viewing of particular documents or index values based on a user’s point of access. </p>
+
+                        Independently verified customer satisfaction is another important requirement for Premier status. Premise is a consistent leader in this critical measure, with an unbeatable rate of 100% customer satisfaction. Our focus is to get it done on time, and on budget, no matter what it takes. That we can promise.</p>
+                        <p class="lead">Access: anytime, anywhere</p>
+                        From anywhere at any time, get quick and convenient access to the business information you depend on.
+                        From your mobile devices to your desktop, you can access the data and documents you need to run your business.
+                        All related information is connected and tied together for one-click access.
+                        With workflow automation, your content becomes a dynamic part of your business.</p>
+                        <p class="lead">Integration</p>
+                        Get more work done by tying all of your business systems into a single, cohesive unit.
+                        Bring together data, content & processes by integrating our technology with your core business systems
+                        Access the information stored in the document management system directly from within the business system you are working
+                        We offer simple, standard and custom integration support
+                      Connect with all of the core systems you depend on: SharePoint, Oracle, Great Plains, SAP and more</p> 
+                        <p>
+                        <p>
+                        <a class="btn btn-large btn-primary" href="./contact.html">Contact us today</a></p>
+                        </p>
+                        <!--<a href="https://twitter.com/PremiseNow"><i class="fa fa-twitter fa-2x"></i></a>
+                        &nbsp;&nbsp;&nbsp;&nbsp;
+                        <a href="#"><i class="fa fa-facebook fa-2x"></i></a>
+                        &nbsp;&nbsp;&nbsp;&nbsp;
+                       <a href="#"><i class="fa fa-google-plus fa-2x"></i></a>
+                       &nbsp;&nbsp;&nbsp;&nbsp;
+                       <a href="#"><i class="fa fa-linkedin fa-2x"></i></a>
+                      -->
+                       <div class="container marketing">
+
+      <!-- What Others are saying -->
+      <hr class="featurette-divider">
+      <div class="row">
+        <div class="span4">
+
+          
+          <img class="img-circle"><a href="https://twitter.com/PremiseNow"><i class="fa fa-twitter fa-4x"></i></a>
+          <h2>Twitter</h2>
+          <p> What are Others are saying on Twitter!</p>
+          <a class="twitter-timeline" href="https://twitter.com/PremiseNow" data-widget-id="529320584530755584">Tweets by @PremiseNow</a>
+          <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+          <!-- <p><a class="btn" href="#">View details &raquo;</a></p> -->
+        </div>
+        <div class="span4">
+          <img class="img-circle"><a href="https://twitter.com/PremiseNow"><i class="fa fa-facebook fa-4x"></i></a>
+          <h2>Facebook</h2>
+          <p>See What Others are saying on Facebook!.</p>
+          <!--<p><a class="btn" href="#">Visit Portal &raquo;</a></p> -->
+        </div>
+        <div class="span4">
+          <img class="img-circle"><a href="https://twitter.com/PremiseNow"><i class="fa fa-linkedin fa-4x"></i></a>
+          <h2>Linkedin</h2>
+          <p>Visit us on linked!</p>        
+
+          <!--<p><a class="btn" href="#">View details &raquo;</a></p> -->
+        </div>
+      </div>
+      
+       </div>
+
+                       <!-- Message US 
+
+                       <hr class="featurette-divider">
+
+                       <div class="featurette">
+                        <img class="featurette-image pull-right" src="img/consulting.jpg">
+                         <form role="form">
+                             <fieldset>
+                              <div class="Lead">
+                        <h2 class="featurette-heading">Send us a <span class="muted"> Message</span></h2>
+                    </div>
+                                <div class="form-group">
+                                  </p>
+                                    <input class="form-control" placeholder="Enter your Name: " name="name" type="text" autofocus>
+                                </div>
+                                <div class="form-group">
+                                  
+                                    <input class="form-control" placeholder="Enter Your Email Adress: " name="name" type="email" autofocus>
+                                </div>
+                                <div class="form-group">
+                                 
+                                    <input class="form-control" placeholder="Message Subject: " name="name" type="text" autofocus>
+                                </div>
+                                <div class="form-group">
+                                  
+                                    <input class="form-control" placeholder="Enter your Name: " name="name" type="text" autofocus>
+                                </div>
+                                <a href="" class="btn btn-large btn-success">Submit</a>
+                                </fieldset>
+                        </form>     
+                                
+           </div>
+    </div>
+                                                                -->
+      <hr class="featurette-sample">
+      <!--
+      <div class="featurette">
+        <img class="featurette-image pull-left" src="img/SSD.jpg">
+        <h2 class="featurette-heading">IBM iSeries & xSeries & Power Systems Disaster Recovery Services. <span class="muted">See for yourself.</span></h2>
+        <p class="lead">When disaster strikes, will it leave you high and dry or will you meet it head on? 
+
+None of us can predict disaster, so it is important to be prepared for the possibility of disaster at all times. Do you have a business continuity plan? 
+
+Are you confident in your disaster response times? What is your disaster recovery plan for re-instituting productivity in the aftermath of a major security breach, computer failure, or other emergency situation?
+
+As businesses all over the world are facing these situations in growing numbers, due to increased globalization and Internet connectedness, many are beginning to realize how important it is to have a plan in place. To lose company-wide productivity for the span of days, if not weeks, is simply unacceptable. It is imperative that business managers institute plans for restoring productivity in the event of a disaster.
+
+That's where Premise, Inc. comes in. We are experts at disaster recovery services, we specialize in IBM iSeries & xSeries Disaster Recovery, and we address all the problems you're likely to be having. We work with you to ensure that while you recover your network, you can keep critical employees online and maintain communication across and outside your organization. .</p>
+      </div>
+
+      <hr class="featurette-divider">
+
+      <div class="featurette">
+        <img class="featurette-image pull-right" src="img/storage.jpg">
+        <h2 class="featurette-heading">IBM Storage Solutions. <span class="muted">Solid-state Storage solutions.</span></h2>
+        <p class="lead">Smart Data Placement — DB2 and DS8000 enables affordable use of solid-state storage technology. With less than 10 percent solid-state storage, Smart Data Placement can deliver over 90 percent of the throughput increase of all solid-state arrays; substantially reducing Capital Expenses for high performance storage solutions.
+        Solid-state storage is available for all IBM server platforms. This storage can provide up to 800 percent improvement in back-end drive response times.
+        Engineers and researchers at the IBM Hursley development lab in England and the Almaden Research Center in California have set a record in storage speed, outperforming the current rate by more than 250 percent. By combining Flash solid-state technology and IBM storage virtualization technology, the researchers were able to transfer data at more than 1 million Input/Output (I/O) per second.</p>
+      </div>
+
+      <hr class="featurette-divider"> --> 
+      
+      <!-- FOOTER -->
+      <footer>
+        <p class="pull-right"><a href="#">Back to top</a></p>
+        <p>&copy; 2013 Premise, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+
+      </footer>
+
+    </div><!-- /.container -->
+
+
+
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap-transition.js"></script>
+    <script src="js/bootstrap-alert.js"></script>
+    <script src="js/bootstrap-modal.js"></script>
+    <script src="js/bootstrap-dropdown.js"></script>
+    <script src="js/bootstrap-scrollspy.js"></script>
+    <script src="js/bootstrap-tab.js"></script>
+    <script src="js/bootstrap-tooltip.js"></script>
+    <script src="js/bootstrap-popover.js"></script>
+    <script src="js/bootstrap-button.js"></script>
+    <script src="js/bootstrap-collapse.js"></script>
+    <script src="js/bootstrap-carousel.js"></script>
+    <script src="js/bootstrap-typeahead.js"></script>
+    <script src="js/bootstrap-typeahead.js"></script>
+    <script src="http://maps.googleapis.com/maps/api/js?sensor=false&extension=.js&output=embed"></script>
+    <script>
+      !function ($) {
+        $(function(){
+          // carousel demo
+          $('#myCarousel').carousel()
+        })
+      }(window.jQuery)
+    </script>
+    <script src="js/holder/holder.js"></script>
+  </body>
+</html>
